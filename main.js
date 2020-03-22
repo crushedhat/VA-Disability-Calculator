@@ -31,13 +31,15 @@ function calculatePercentage(rating) {
     arr.sort(function(first, last){
         return last-first
     });
+    
     combinedRating = arr[0]+(100-arr[0])*(arr[1]/100)
     
     for(let i = 2; i < arr.length; i++) {
-    totalRating = combinedRating+(100-combinedRating)*(arr[i]/100)
-    combinedRating = Math.round(totalRating)
+        totalRating = combinedRating+(100-combinedRating)*(arr[i]/100)
+        combinedRating = Math.round(totalRating)
     }
+    //starting values of text boxes need to be 0% initialize in creatediv
+    //need to catch if there is only one disability percentage click and output into textbox
     document.getElementById("cdisability").value = Math.round(combinedRating)
     document.getElementById("fdisability").value = Math.round(combinedRating/10) * 10
-    //return highest disbilited into a combined % function combinedDis + (100-combined) * (new claim percentage/100)
 }
