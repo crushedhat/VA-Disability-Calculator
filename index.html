@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>VA Disability Calculator</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+
+<div id="disability-percentages">
+    <button id="10" class="percentage" onclick=createDiv(this.id)>
+        <span class="button-text">10%</span>
+    </button>
+    <button id="20" class="percentage" onclick=createDiv(this.id)>
+        <span class="button-text">20%</span>
+    </button>
+    <button id="30" class="percentage" onclick=createDiv(this.id)>
+        <span class="button-text">30%</span>
+    </button>
+    <button id="40" class="percentage" onclick=createDiv(this.id)>
+        <span class="button-text">40%</span>
+    </button>
+    <button id="50" class="percentage" onclick=createDiv(this.id)>
+        <span class="button-text">50%</span>
+    </button>
+    <button id="60" class="percentage" onclick=createDiv(this.id)>
+        <span class="button-text">60%</span>
+    </button>
+    <button id="70" class="percentage" onclick=createDiv(this.id)>
+        <span class="button-text">70%</span>
+    </button>
+    <button id="80" class="percentage" onclick=createDiv(this.id)>
+        <span class="button-text">80%</span>
+    </button>
+    <button id="90" class="percentage" onclick=createDiv(this.id)>
+        <span class="button-text">90%</span>
+    </button>
+    <button id="100" class="percentage" onclick=createDiv(this.id)>
+        <span class="button-text">100%</span>
+    </button>
+</div>
+
+<div id="checkbox">
+    <input type="checkbox" id="bilateral"><br>
+    <label for="bilateral">check here if this percentage is a bilateral condition</label>
+</div>
+
+<div id="ratings"></div>
+<div id="final-rating">
+    <form>
+        <label for="cdisability"> Combined Disability Rating:</label>
+        <input type="text" id="cdisability" name="cdisability"><br><br>
+        <label for="fdisability"> Current Disability Rating:</label>
+        <input type="text" id="fdisability" name="fdisability"><br><br>
+    </form>
+</div>
+</body>
+</html>
