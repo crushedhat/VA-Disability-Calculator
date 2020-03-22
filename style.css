@@ -1,11 +1,11 @@
 #disability-percentages {
     height: 200px;
-    width: 41%;
+    width: 580px;
     background-color: aqua;
 }
 
 #disability-percentages button {
-    margin-left: 1%;
+    margin-left: 10px;
     margin-top: 5%;
 }
 
@@ -22,7 +22,7 @@
 #checkbox {
     padding-top: 10px;
     height: 50px;
-    width: 41%;
+    width: 580px;
     text-align: center;
     vertical-align: middle;
     background-color: rgb(18, 109, 109);
@@ -33,14 +33,21 @@
 #ratings{
     padding-top: 10px;
     height: 250px;
-    width: 41%;
+    width: 580px;
     text-align: center;
     vertical-align: middle;
     background-color: rgb(85, 182, 177);
 }
 
 .percentage-entry {
+    float: left;
     border-style: solid;
-    width: 40px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    padding-top: 7px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 20px;
 
 }
