@@ -1,11 +1,11 @@
 #disability-percentages {
-    height: 200px;
-    width: 580px;
-    background-color: aqua;
+    height: 120px;
+    width: 645px;
+    background-color: rgb(241, 241, 241);
 }
 
 #disability-percentages button {
-    margin-left: 10px;
+    margin-left: .8px;
     margin-top: 5%;
 }
 
@@ -14,15 +14,21 @@
 }
 
 .percentage {
-    width: 100px;
+    outline:none;
     height: 50px;
+    width: 60px;
     font-size: 20px;
+    text-align: center;
+    border-radius:10px;
+    text-shadow: 0;
+    cursor: pointer;
+    
 }
 
 #checkbox {
     padding-top: 10px;
     height: 50px;
-    width: 580px;
+    width: 645px;
     text-align: center;
     vertical-align: middle;
     background-color: rgb(18, 109, 109);
@@ -33,7 +39,7 @@
 #ratings{
     padding-top: 10px;
     height: 250px;
-    width: 580px;
+    width: 645px;
     text-align: center;
     vertical-align: middle;
     background-color: rgb(85, 182, 177);
@@ -41,13 +47,30 @@
 
 .percentage-entry {
     float: left;
-    border-style: solid;
-    width: 80px;
-    height: 30px;
     text-align: center;
-    padding-top: 7px;
     margin-left: 10px;
     margin-top: 10px;
+    background-color: white;
+    outline:none;
+    height: 50px;
+    width: 60px;
     font-size: 20px;
+    text-align: center;
+    border-radius:10px;
+    text-shadow: 0;
+    box-shadow: 2px 2px 2px #7e7e7e;
+}
+#final-rating{
+    padding-top: 10px;
+    width: 645px;
+    background-color: green;
+}
 
+#x {
+    position: relative;
+    background: red;
+    height: 15px;
+    color: white;
+    top: -13px;
+    right: -9px;
 }
