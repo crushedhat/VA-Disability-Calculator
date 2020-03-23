@@ -1,7 +1,8 @@
 var arr = []
 
-function removePercentage(){
-    console.log("here")
+function removePercentage(elem){
+    let parentID = elem.parentNode.id
+    document.getElementById(parentID).remove()
 }
 function createDiv(clicked_id){
     let finalRating
@@ -11,9 +12,7 @@ function createDiv(clicked_id){
     divElement.setAttribute("class", "percentage-entry")
     divElement.setAttribute("id", clicked_id + "-entry")
     exitButton.setAttribute("id", "x")
-    exitButton.setAttribute("onclick", "removePercentage()")
-    
-
+    exitButton.setAttribute("onclick", "removePercentage(this)")
     
     if (document.getElementById("bilateral").checked) {
         divElement.innerText = clicked_id + "%"
