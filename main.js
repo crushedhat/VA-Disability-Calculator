@@ -1,19 +1,29 @@
 var arr = []
 
+function removePercentage(){
+    console.log("here")
+}
 function createDiv(clicked_id){
     let finalRating
     let divContainer = document.getElementById("ratings")
     var divElement = document.createElement("div")
+    let exitButton = document.createElement("button")
     divElement.setAttribute("class", "percentage-entry")
     divElement.setAttribute("id", clicked_id + "-entry")
+    exitButton.setAttribute("id", "x")
+    exitButton.setAttribute("onclick", "removePercentage()")
+    
+
     
     if (document.getElementById("bilateral").checked) {
         divElement.innerText = clicked_id + "%"
         divContainer.appendChild(divElement)
+        divElement.appendChild(exitButton)
         finalRating = calculateBilateral(clicked_id)
     } else {
         divElement.innerText = clicked_id + "%"
         divContainer.appendChild(divElement)
+        divElement.appendChild(exitButton)
         finalRating = clicked_id
     }
     calculatePercentage(finalRating)
