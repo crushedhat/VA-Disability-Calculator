@@ -3,7 +3,19 @@ var arr = []
 function removePercentage(elem){
     let parentID = elem.parentNode.id
     document.getElementById(parentID).remove()
+    recalculate()
 }
+
+function recalculate() {
+    let percentage;
+    arr = [] //empty array
+    document.querySelectorAll(".percentage-entry").forEach(function(element) {
+        percentage = element.getAttribute('id');
+        let str = percentage.substring(0,2);
+        calculatePercentage(str)
+    });
+}
+
 function createDiv(clicked_id){
     let finalRating
     let divContainer = document.getElementById("ratings")
@@ -11,7 +23,7 @@ function createDiv(clicked_id){
     let exitButton = document.createElement("button")
     divElement.setAttribute("class", "percentage-entry")
     divElement.setAttribute("id", clicked_id + "-entry")
-    exitButton.setAttribute("id", "x")
+    exitButton.setAttribute("id", "exit")
     exitButton.setAttribute("onclick", "removePercentage(this)")
     
     if (document.getElementById("bilateral").checked) {
@@ -44,8 +56,8 @@ function calculatePercentage(rating) {
 
     if(arr.length == 1) {
         combinedRating = arr[0]
-        document.getElementById("cdisability").value = Math.round(combinedRating)
-        document.getElementById("fdisability").value = Math.round(combinedRating)
+        document.getElementById("cdisability").value = Math.round(combinedRating) + "%"
+        document.getElementById("fdisability").value = Math.round(combinedRating) + "%"
     } else {
         combinedRating = arr[0]+(100-arr[0])*(arr[1]/100)
     
@@ -53,10 +65,8 @@ function calculatePercentage(rating) {
             totalRating = combinedRating+(100-combinedRating)*(arr[i]/100)
             combinedRating = Math.round(totalRating)
         }
-        //starting values of text boxes need to be 0% initialize in creatediv
-        //need to catch if there is only one disability percentage click and output into textbox
-        document.getElementById("cdisability").value = Math.round(combinedRating)
-        document.getElementById("fdisability").value = Math.round(combinedRating/10) * 10
+        document.getElementById("cdisability").value = Math.round(combinedRating) + "%"
+        document.getElementById("fdisability").value = Math.round(combinedRating/10) * 10 + "%"
     }
     
     
