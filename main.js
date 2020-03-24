@@ -55,10 +55,7 @@ function calculatePercentage(rating) {
     arr.sort(function(first, last){
         return last-first
     });
-    //not erroring out at first if
-    if(arr == 0) {
-        console.error("here")
-    } else if (arr.length == 1) {
+    if (arr.length == 1) {
         combinedRating = arr[0]
         document.getElementById("cdisability").value = Math.round(combinedRating) + "%"
         document.getElementById("fdisability").value = Math.round(combinedRating) + "%"
