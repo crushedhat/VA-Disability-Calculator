@@ -8,7 +8,9 @@ function removePercentage(elem){
 
 function recalculate() {
     let percentage;
-    arr = [] //empty array
+    arr = []
+    document.getElementById("cdisability").value = "0%"
+    document.getElementById("fdisability").value = "0%"
     document.querySelectorAll(".percentage-entry").forEach(function(element) {
         percentage = element.getAttribute('id');
         let str = percentage.substring(0,2);
@@ -53,8 +55,10 @@ function calculatePercentage(rating) {
     arr.sort(function(first, last){
         return last-first
     });
-
-    if(arr.length == 1) {
+    //not erroring out at first if
+    if(arr == 0) {
+        console.error("here")
+    } else if (arr.length == 1) {
         combinedRating = arr[0]
         document.getElementById("cdisability").value = Math.round(combinedRating) + "%"
         document.getElementById("fdisability").value = Math.round(combinedRating) + "%"
@@ -68,6 +72,4 @@ function calculatePercentage(rating) {
         document.getElementById("cdisability").value = Math.round(combinedRating) + "%"
         document.getElementById("fdisability").value = Math.round(combinedRating/10) * 10 + "%"
     }
-    
-    
 }
