@@ -52,9 +52,7 @@ function calculatePercentage(rating) {
     let combinedRating
     let totalRating
     arr.push(parseInt(rating))
-    arr.sort(function(first, last){
-        return last-first
-    });
+    
     if (arr.length == 1) {
         combinedRating = arr[0]
         document.getElementById('cdisability').value = Math.round(combinedRating) + '%'
